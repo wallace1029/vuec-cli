@@ -1,0 +1,24 @@
+{
+  "name": "vuec-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vuec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youzhiwang/vuec-cli.git"
+  },
+  "author": "Youzhi Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youzhiwang/vuec-cli/issues"
+  },
+  "homepage": "https://github.com/youzhiwang/vuec-cli#readme",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "git-clone-promise": "^1.0.0",
+    "shelljs": "^0.8.3"
+  }
+}
