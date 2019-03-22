@@ -1,8 +1,11 @@
 {
   "name": "vuec-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a vue component project quickly.",
   "main": "vuec.js",
+  "bin": {
+    "vuec": "vuec.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/youzhiwang/vuec-cli.git"
