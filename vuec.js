@@ -1,5 +1,5 @@
-#!/usr/bin/env node   //这里很重要，标记为node运行环境！
-
+#!/usr/bin/env node
+//这里很重要，标记为node运行环境！
 const clone = require('git-clone-promise')
 const program = require('commander')
 const shell = require('shelljs')
