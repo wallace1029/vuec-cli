@@ -35,6 +35,8 @@ program
         if (err) throw err
         let list = JSON.parse(data)
         list.name = componentName
+        list.main = `lib/${componentName}.umd.min.js`
+        list.scripts.lib = `vue-cli-service build --target lib --name ${componentName} --dest lib packages/index.js`
         let newContent = JSON.stringify(list, null, 2)
         fs.writeFile(path.join(targetPath, './package.json'), newContent, 'utf8', err => {
           if (err) throw err
@@ -51,4 +53,5 @@ program
 
 program.parse(process.argv)
 // 如果参数的长度为0，例如只输入了vuec，则打印出说明方法
+const {args} = program
 if (args.length === 0) program.help()
