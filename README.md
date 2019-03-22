@@ -2,7 +2,7 @@
 
 ```javascript
 npm i -g vuec-cli
-vuec create <component> <options>
+vuec create <component-name> <options>
 ```
 
 ### options
