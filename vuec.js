@@ -41,6 +41,9 @@ program
         fs.writeFile(path.join(targetPath, './package.json'), newContent, 'utf8', err => {
           if (err) throw err
           console.log('模板下载完成！')
+          console.log(``)
+          console.log(`cd ${componentName}`)
+          console.log(`npm run serve`)
         })
       })
     })
