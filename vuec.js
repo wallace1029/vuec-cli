@@ -17,8 +17,9 @@ program
   .command('create <componentName>')
   // 可选参数，确定使用的ui库，只能传入指定值，默认'vue'
   .option('-t, --template <template>', '选择ui框架', /^(vue|element|sweet)$/i, 'vue')
-  .action(function (componentName, options) { // 执行命令的的函数
-    // 从optiosn中获取template
+  .action(function (componentName, options) {
+    // 执行命令的的函数
+    // 从options中获取template
     const {template} = options
     // 获取当前命令的路径
     const pwd = shell.pwd()
@@ -38,7 +39,6 @@ program
         fs.writeFile(path.join(targetPath, './package.json'), newContent, 'utf8', err => {
           if (err) throw err
           console.log('模板下载完成！')
-          docs.explain()
         })
       })
     })
@@ -50,3 +50,5 @@ program
   })
 
 program.parse(process.argv)
+// 如果参数的长度为0，例如只输入了vuec，则打印出说明方法
+if (args.length === 0) program.help()
