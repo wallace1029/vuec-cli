@@ -1,18 +1,17 @@
-### how to use
+# vuec-cli
+Create a vue component project quickly.
 
-```javascript
-npm i -g vuec-cli
-vuec create <component-name> <options>
+## Install
+```bash
+npm install -g vuec-cli
 ```
 
-### options
-* -t --template \<templateName\>
-  * templateName
-    * vue(default, only vue now.)
-    * element(not support yet)
-    * sweet(not support yet)
+## How to use
+```bash
+vuec create <component-name>
+```
 
-### example 
-```javascript
-vuec create my-component -t vue
+## Example 
+```bash
+vuec create my-component
 ```

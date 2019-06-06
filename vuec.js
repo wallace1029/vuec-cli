@@ -10,13 +10,13 @@ const docs = require('./docs')
 
 program
   .version('1.0.0')
-  .description('Easy to build vue component project.')
+  .description('Craete vue component project.')
 
 program
 // 命名命令，必选参数componentName,传入action函数第一个参数
   .command('create <componentName>')
   // 可选参数，确定使用的ui库，只能传入指定值，默认'vue'
-  .option('-t, --template <template>', '选择ui框架', /^(vue|element|sweet)$/i, 'vue')
+  .option('-t, --template <template>', '选择ui框架', /^(vue)$/i, 'vue')
   .action(function (componentName, options) {
     // 执行命令的的函数
     // 从options中获取template
