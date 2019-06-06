@@ -25,7 +25,7 @@ program
     const pwd = shell.pwd()
     // 获取项目的最终存放路径
     const targetPath = path.join(pwd.toString(), componentName)
-    const repository = `https://github.com/youzhiwang/${template}_component_project_template`
+    const repository = `https://github.com/youzhiwang/${template}-component-project-template`
     console.log('Downloading... please be patient!😁')
     clone(repository, targetPath).then(res => {
       // 删除.git文件
