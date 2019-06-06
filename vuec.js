@@ -16,7 +16,7 @@ program
 // 命名命令，必选参数componentName,传入action函数第一个参数
   .command('create <componentName>')
   // 可选参数，确定使用的ui库，只能传入指定值，默认'vue'
-  .option('-t, --template <template>', '选择ui框架', /^(vue)$/i, 'vue')
+  .option('-t, --template <template>', 'Please choose the template name. (Only vue now!)', /^(vue)$/i, 'vue')
   .action(function (componentName, options) {
     // 执行命令的的函数
     // 从options中获取template
@@ -25,8 +25,8 @@ program
     const pwd = shell.pwd()
     // 获取项目的最终存放路径
     const targetPath = path.join(pwd.toString(), componentName)
-    const repository = `https://github.com/youzhiwang/${template}-component`
-    console.log('正在获取组件模板，请耐心等待...')
+    const repository = `https://github.com/youzhiwang/${template}_component_project_template`
+    console.log('Downloading... please be patient!😁')
     clone(repository, targetPath).then(res => {
       // 删除.git文件
       shell.rm('-rf', path.join(targetPath, '.git'))
@@ -40,7 +40,7 @@ program
         let newContent = JSON.stringify(list, null, 2)
         fs.writeFile(path.join(targetPath, './package.json'), newContent, 'utf8', err => {
           if (err) throw err
-          console.log('模板下载完成！')
+          console.log('Downlaod success!😁')
           console.log(``)
           console.log(`cd ${componentName}`)
           console.log(`npm run serve`)
