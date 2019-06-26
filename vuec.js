@@ -19,13 +19,13 @@ program
   .option('-t, --template <template>', 'Please choose the template name. (Only vue now!)', /^(vue)$/i, 'vue')
   .action(function (componentName, options) {
     // 执行命令的的函数
-    // 从options中获取template
+    // 从options中获取 template，目前默认为 vue，故该参数暂时无用
     const {template} = options
     // 获取当前命令的路径
     const pwd = shell.pwd()
     // 获取项目的最终存放路径
     const targetPath = path.join(pwd.toString(), componentName)
-    const repository = `https://github.com/youzhiwang/${template}-component-project-template`
+    const repository = `https://github.com/youzhiwang/vuec-template`
     console.log('Downloading... please be patient!😁')
     clone(repository, targetPath).then(res => {
       // 删除.git文件
